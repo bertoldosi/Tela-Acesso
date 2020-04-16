@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %} Acesso {% endblock %}
+
+{% block conteudo %}
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+
+        <form method="post">{% csrf_token %}
+          <div class="form-group">
+            <div class="form-label-group">
+              <input  name="username" type="text" id="inputEmail" class="form-control" placeholder="Endereço de email" required="required" autofocus="autofocus">
+              <label for="inputEmail">Email</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input name="password" type="text" id="inputPassword" class="form-control" placeholder="Senha" required="required">
+              <label for="inputPassword">Senha</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remember-me">
+                Relembrar Senha
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="{% url 'cadastrar' %}">Cadastrar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}
+
