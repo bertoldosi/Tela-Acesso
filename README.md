@@ -1,4 +1,3 @@
----
 
 ## 📖 Sobre:
 
@@ -21,7 +20,6 @@ Uma aplicação simples de tela de acesso.
 - Python
 - Django
 - Sqlite
---- 
 
 
 ---
